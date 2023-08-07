@@ -38,8 +38,8 @@ const Contact = () => {
                 cols="30"
                 rows="10"
               ></textarea>
-              <button className="bg-gradient-to-r from-pink-500 to-violet-500 flex justify-center items-center rounded-md mt-3 py-2 text-white">
-                Send <AiOutlineSend />
+              <button className="bg-gradient-to-r from-pink-500 to-violet-500 hover:bg-gradient-to-l hover:scale-105 duration-300 flex justify-center items-center rounded-md mt-3 py-2 text-white">
+                Send <AiOutlineSend className="ml-2" />
               </button>
             </Fade>
           </form>
@@ -48,9 +48,9 @@ const Contact = () => {
           <div className="col-span-1 flex justify-center">
             <Flip top>
               <div className="flex-col">
-                <CiLocationOn className="text-white text-[2rem] mb-6" />
-                <BsFillTelephoneFill className="text-white text-[2rem] mb-6" />
-                <BsFillEnvelopeFill className="text-white text-[2rem]" />
+                <CiLocationOn className="text-white text-[2rem] mb-6 hover:text-pink-600 duration-300 " />
+                <BsFillTelephoneFill className="text-white text-[2rem] mb-6 hover:text-pink-600 duration-300" />
+                <BsFillEnvelopeFill className="text-white text-[2rem] hover:text-pink-600 duration-300" />
               </div>
             </Flip>
           </div>
