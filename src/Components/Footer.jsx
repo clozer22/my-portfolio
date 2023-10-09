@@ -28,7 +28,7 @@ const Footer = () => {
           <BsTwitter className="text-[2rem] ml-10 hover:text-pink-600 duration-300" />
         </Flip>
         <Flip top duration={2000} delay={400}>
-          <a href="https://github.com/clozer22/my-portfolio" target="_blank">
+          <a href="https://github.com/clozer22" target="_blank">
             <BsGithub className="text-[2rem] ml-10 hover:text-pink-600 duration-300" />
           </a>
         </Flip>
