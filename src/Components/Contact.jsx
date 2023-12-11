@@ -7,9 +7,13 @@ import Flip from "react-reveal/Flip";
 import Fade from "react-reveal";
 import emailjs from "@emailjs/browser";
 import Alert from "react-popup-alert";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const form = useRef();
+
+  const notify = (type, message) => toast[type](message);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,10 +28,10 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          onShowAlert("success", "Message Sent");
+          notify("success", "Message Sent");
         },
         (error) => {
-          onShowAlert("error", "Message not sent");
+          notify("error", "Message not sent");
         }
       );
   };
@@ -56,7 +60,7 @@ const Contact = () => {
 
   return (
     <div className="w-full h-screen mt-[10rem]">
-      <Alert
+      {/* <Alert
         header={"Success ✔"}
         btnText={"Close"}
         text={alert.text}
@@ -94,7 +98,7 @@ const Contact = () => {
           borderRadius: "5px",
           color: "white",
         }}
-      />
+      /> */}
 
       <div className="flex justify-center items-center">
         <Flip top>
@@ -140,6 +144,10 @@ const Contact = () => {
                 type="submit"
                 className="bg-gradient-to-r from-pink-500 to-violet-500 hover:bg-gradient-to-l hover:scale-105 duration-300 flex justify-center items-center rounded-md mt-3 py-2 text-white"
               >
+                <ToastContainer
+                position="bottom-right"
+                theme="light"
+                style={{zIndex: 100}} />
                 Send <AiOutlineSend className="ml-2" />
               </button>
             </Fade>
